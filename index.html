@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>DEAXD OSINT</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Oswald', sans-serif;
+    }
+
+    body{
+      background: radial-gradient(circle at top, #220022, #000);
+      color:white;
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      padding:30px;
+      overflow-x:hidden;
+    }
+
+    .container{
+      width:100%;
+      max-width:520px;
+      text-align:center;
+    }
+
+    /* LOGO */
+
+    .logo{
+      margin-bottom:40px;
+    }
+
+    .skull{
+      font-size:75px;
+      display:inline-block;
+      animation:glow 3s ease-in-out infinite;
+    }
+
+    @keyframes glow{
+      0%{
+        filter:drop-shadow(0 0 10px #ff00ff);
+      }
+      50%{
+        filter:drop-shadow(0 0 25px #ff66ff);
+      }
+      100%{
+        filter:drop-shadow(0 0 10px #ff00ff);
+      }
+    }
+
+    h1{
+      margin-top:10px;
+      font-size:65px;
+      letter-spacing:6px;
+      font-weight:700;
+    }
+
+    h1 span{
+      color:#ff00ff;
+    }
+
+    .subtitle{
+      margin-top:5px;
+      color:#ff99ff;
+      font-size:13px;
+      letter-spacing:5px;
+      font-weight:300;
+    }
+
+    /* SEPARATOR */
+
+    .line{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      margin:28px 0 18px;
+      color:#ff99ff;
+      font-size:13px;
+      letter-spacing:3px;
+    }
+
+    .line::before,
+    .line::after{
+      content:"";
+      flex:1;
+      height:1px;
+      background:#660066;
+    }
+
+    /* BUTTONS */
+
+    .buttons{
+      display:flex;
+      flex-direction:column;
+      gap:18px;
+    }
+
+    .btn{
+      background:rgba(40,0,40,0.7);
+      border:1px solid #660066;
+      border-radius:18px;
+      padding:24px;
+      text-decoration:none;
+      color:white;
+      transition:0.35s;
+      backdrop-filter: blur(6px);
+    }
+
+    .btn:hover{
+      transform:scale(1.04);
+      background:#ff00ff;
+      color:#000;
+      box-shadow:0 0 25px rgba(255,0,255,0.7);
+    }
+
+    .btn-title{
+      font-size:28px;
+      font-weight:700;
+      letter-spacing:1px;
+    }
+
+    .btn-sub{
+      margin-top:8px;
+      font-size:14px;
+      opacity:0.8;
+      font-weight:300;
+    }
+
+    /* COPY */
+
+    .copy{
+      display:flex;
+      gap:12px;
+      margin-top:12px;
+    }
+
+    .copy input{
+      flex:1;
+      background:#120012;
+      border:1px solid #660066;
+      border-radius:14px;
+      padding:14px;
+      color:#ff99ff;
+      outline:none;
+      font-size:13px;
+      font-family:Arial;
+    }
+
+    .copy button{
+      background:#ff00ff;
+      color:#000;
+      border:none;
+      border-radius:14px;
+      padding:0 24px;
+      font-size:15px;
+      font-weight:600;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    .copy button:hover{
+      transform:scale(1.05);
+      box-shadow:0 0 18px rgba(255,0,255,0.7);
+    }
+
+    /* FEATURES */
+
+    .features{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:16px;
+      margin-top:10px;
+    }
+
+    .feature{
+      background:rgba(40,0,40,0.6);
+      border:1px solid #660066;
+      border-radius:18px;
+      padding:24px 18px;
+      transition:0.3s;
+    }
+
+    .feature:hover{
+      transform:translateY(-4px);
+      border-color:#ff00ff;
+      box-shadow:0 0 18px rgba(255,0,255,0.4);
+    }
+
+    .feature-icon{
+      font-size:28px;
+      margin-bottom:10px;
+    }
+
+    .feature h3{
+      font-size:20px;
+      margin-bottom:8px;
+      font-weight:500;
+    }
+
+    .feature p{
+      color:#ff99ff;
+      font-size:13px;
+      line-height:1.6;
+      font-weight:300;
+    }
+
+    @media(max-width:560px){
+      .features{
+        grid-template-columns:1fr;
+      }
+
+      h1{
+        font-size:52px;
+      }
+
+      .btn-title{
+        font-size:24px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="logo">
+      <div class="skull">💀</div>
+      <h1>DEA<span>XD</span></h1>
+      <div class="subtitle">OSINT TOOLS</div>
+    </div>
+
+    <div class="line">ACCÈS DIRECT</div>
+
+    <div class="buttons">
+
+      <a class="btn" href="https://deaxdtargxt.onrender.com/" target="_blank">
+        <div class="btn-title">DEAXD OSINT</div>
+        <div class="btn-sub">Lien principal • Outils OSINT</div>
+      </a>
+
+      <a class="btn" href="https://deaxdstream.onrender.com/" target="_blank">
+        <div class="btn-title">DEAXD STREAM</div>
+        <div class="btn-sub">Lien secondaire • Accès rapide</div>
+      </a>
+
+    </div>
+
+    <div class="line">PARTAGER CE SITE</div>
+
+    <div class="copy">
+      <input type="text" value="https://deaxdtargxt.onrender.com/" id="copyInput" readonly>
+      <button onclick="copyLink()">Copier</button>
+    </div>
+
+    <div class="line">POURQUOI DEAXD</div>
+
+    <div class="features">
+
+      <div class="feature">
+        <div class="feature-icon">🔎</div>
+        <h3>OSINT</h3>
+        <p>Accès rapide à des outils de recherche et d'investigation open source.</p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">⚡</div>
+        <h3>Rapide</h3>
+        <p>Interface légère et accès immédiat aux ressources.</p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">🔒</div>
+        <h3>Sans Compte</h3>
+        <p>Utilisation simple sans inscription obligatoire.</p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">🛡️</div>
+        <h3>Disponible</h3>
+        <p>Liens accessibles et régulièrement maintenus.</p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+    function copyLink(){
+      const input = document.getElementById("copyInput");
+      navigator.clipboard.writeText(input.value);
+      alert("Lien copié !");
+    }
+  </script>
+
+</body>
+</html>
